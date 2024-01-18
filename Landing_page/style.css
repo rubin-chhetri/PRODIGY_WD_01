@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: rgba(12, 215, 218, 0.392);
+    background-repeat: no-repeat;
+    height: 100vh;
+    width:100%;
+
+    background-size:cover ;
+    background-position: center;
+   
+}
+header{
+    background-color: #161a1d27;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+main {
+    margin-top: 60px;
+    padding: 10px; 
+}
+
+.logo{
+    position: relative;
+    left: 20px;
+    font-size: 30px;
+}
+
+
+li{
+    list-style: none;
+}
+a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.navbar{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:50px;
+    padding:0 25px;
+}
+
+.nav-link{
+    transition: 0.5s ease;
+}
+.nav-link:hover{
+    color: dodgerblue;
+}
+.hamburger{
+    display: none;
+    cursor: pointer;
+    padding: 0 20px;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: white;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+@media(max-width:769px){
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #161a1d27;
+        width: 20%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+    }
+     .nav-menu.active{
+        right: 0;
+
+        transition: 0.3s ease-in-out;
+        
+    }
+    .nav-link:hover{
+        color: dodgerblue;
+    }  
+   
+    .card-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+ 
+}
+    .select {
+    text-align: center;
+    margin-top: 10px;
+    
+}
+
+.card-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+    
+}
+
+.card {
+   
+    width: 275px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    overflow: hidden;
+    margin: 20px;
+  }
+  
+  
+  .card:hover {
+    box-shadow: 8px 8px 16px 8px rgba(0,0,0,0.2);
+  }
+  
+  
+  .container {
+    background-color:rgba(216, 192, 192, 0.286);
+    text-align: center;
+  }
+  .container a{
+    padding: 2px;
+  }
+  .card img {
+    border-radius: 5px 5px 0 0;
+  }
+  .btn{
+    background-color: rgb(75, 148, 15);
+    border-radius: 4px;
+    color: white;
+}
+.btn:hover{
+    background-color: black;
+    text-decoration: underline;
+}
+
+.footer{
+    background-color: black;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer a{
+    color: white;
+    transition: 0.7s ease;
+}
+.footer a #facebook:hover{
+    color: dodgerblue;
+}
+.footer a #instagram:hover{
+    color: rgb(231, 139, 10);
+}
+.footer a #twitter:hover{
+    color: rgb(10, 25, 231);
+}
+.footer a #youtube:hover{
+    color: rgb(209, 13, 13);
+}
